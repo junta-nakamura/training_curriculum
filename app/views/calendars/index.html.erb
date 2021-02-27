@@ -1,4 +1,4 @@
-<div>
+
   <%= form_with model: @plan, url: calendars_path, class: 'form' do |f| %>
     <%= f.label :日付を選択, class: 'lavel' %>
     <%= f.date_field :date, class: 'date-select' %>
@@ -6,8 +6,7 @@
     <%= f.text_field :plan, class: 'text-input' %>
     <%= f.submit '保存' %>
   <% end %>
-</div>
-<div>
+
   <div class='calendar'>
     <% @week_days.each do |day| %>
       <div class='item'>
@@ -24,4 +23,9 @@
       </div>
     <% end %>
   </div>
-</div>
+
+<%# @today_date...今日の日付
+@week_days...今日から６日後までの月と日のセットが入った配列
+plans...今日から６日後までのモデルを持った変数
+today_plans...今日から６日後までのplanが入った配列
+days...今日から６日後までの月と日（month...今日から６日後までの月、date...今日から６日後までの日） %>

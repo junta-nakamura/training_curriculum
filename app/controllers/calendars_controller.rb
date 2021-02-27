@@ -40,3 +40,10 @@ class CalendarsController < ApplicationController
 
   end
 end
+
+# @today_date...今日の日付
+# @week_days...今日から６日後までの月と日のセットが入った配列
+# plans...今日から６日後までのモデルを持った変数
+# today_plans...今日から６日後までのplanが入った配列
+# days...今日から６日後までの月と日（month...今日から６日後までの月、date...今日から６日後までの日）
+
